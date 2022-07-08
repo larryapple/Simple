@@ -7,19 +7,32 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct PlayerView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
+        Text("Column 1")
+        Text("Column 2")
+        Text("Column 3")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+struct ContentView: View {
+    var body: some View {
+        Grid {
+            GridRow {
+                PlayerView()
+            }
+        }
+        Grid {
+            GridRow {
+                PlayerView()
+            }
+        }
+
     }
 }
+
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
